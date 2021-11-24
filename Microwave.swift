@@ -34,8 +34,8 @@ print("That isn't a viable option")
 break
 } else if choice >= 1 && choice <= 3 {
 while choice > 1 {
-choice = choice - 1
-multi = multi + 0.5
+choice -= 1
+multi += 0.5
 }
 total = multi * time
 }
