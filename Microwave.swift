@@ -7,36 +7,39 @@
 * @since   2021-22-11
 */
 
-let multi = 1
+var total = 0.0
+var multi = 1.0
 let max = 3
 let min = 1
-let time = 0
+var time = 0.0
 print("What are you microwaving(soup, sub, pizza)? ")
-let choice = readLine()
+let answer = readLine()
+let response = String(answer!)
 while true {
-if choice.lowercased() == "pizza" {
-time = 45
-} else if choice.lowercased() == "sub" {
-time = 60
-} else if choice.lowercased() == "soup" {
-time = 105
+if response == "pizza" {
+time = 45.0
+} else if response == "sub" {
+time = 60.0
+} else if response == "soup" {
+time = 105.0
 } else {
 print("That isn't a viable option")
 break
 }
 print("How much are you microwaving(min 1, max 3)? ")
 let amount = readLine()
-if let input = Int(amount!) {
-if input > 3 || input < 1 {
+if var choice = Int(amount!) {
+if choice > 3 || choice < 1 {
 print("That isn't a viable option")
 break
-} else if input >= 1 && input <= 3 {
-while input > 1 {
-input = input - 1
+} else if choice >= 1 && choice <= 3 {
+while choice > 1 {
+choice = choice - 1
 multi = multi + 0.5
 }
 total = multi * time
 }
 print("It will take ", total, " seconds for it to microwave.")
 }
-
+break
+}
